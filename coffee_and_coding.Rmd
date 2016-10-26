@@ -1,0 +1,13 @@
+---
+title: "BEIS coffee and coding"
+output: html_notebook
+author: "Matthew Upson"
+date: "2016-10-26"
+---
+
+# Test Driven Development (TDD), with testthat and purrr
+
+## BEIS Coffee and Coding
+
+Imagine that we want to normalise a vector, which is a common task for machine learning.
+Before setting out to write the code, there are a few things we already expect that we will 
