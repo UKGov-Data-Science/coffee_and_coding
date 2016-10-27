@@ -1,21 +1,20 @@
 ---
-title: "BEIS coffee and coding"
-author: "Matthew Upson"
+title: "BEIS coffee and coding http://goo.gl/3fWJrF"
+author: "Matthew Upson matthew.upson@digital.cabinet-office.gov.uk"
 date: '2016-10-26'
 output:
-  html_document: default
   html_notebook: default
+  html_document: default
+web_link: http://goo.gl/3fWJrF
 ---
 
-```{r setup}
+```{r setup, include=FALSE}
 knitr::opts_chunk$set(
   error = TRUE
   )
 ```
 
-# Test Driven Development (TDD), with testthat and purrr
-
-## BEIS Coffee and Coding
+## Test Driven Development (TDD), with testthat and purrr
 
 Imagine that we want to normalise a vector, which is a common task for machine learning.
 
@@ -26,9 +25,10 @@ $$
 \vec{y} = \frac{\vec{x}-\min{x}}{\max{x}-\min{x}}
 $$
 Where:
-* $\vec{y}$
-* $\vec{x}$ is our vector,
-* $\bar{x}$ is the sample mean,
+
+* $\vec{y}$,  
+* $\vec{x}$ is our vector,  
+* $\bar{x}$ is the sample mean,  
 * $s$ is the sample standard deviation.
 
 Before setting out to write the code, there are a few things we already expect to be true of $\vec{y}$.
@@ -485,16 +485,9 @@ model <- lm(mpg ~ wt, data = mtcars)
 summary(model)
 
 ```
-All very simple stuff.
-And if we want to plot it, thats easy too:
 
-```{r}
-plot(mtcars$wt,mtcars$mpg)
-abline(model)
+All very simple stuff, so far so good.
 
-```
-
-So far so good.
 Now lets say we have an interest in the number of cylinders that the cars have, and we want to run a model for every number of cylinders that a car might have.
 We can do this by slitting the `mtcars` dataset over `cyl`.
 
