@@ -4,4 +4,4 @@ Examples of using `testthat` and `purrr` for test driven development in R and op
 
 ## Requirements
 
-
+## Further reading
