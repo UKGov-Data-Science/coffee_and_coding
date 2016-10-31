@@ -391,6 +391,7 @@ Actually it turns out that we can use `purrr` to help us create this list in the
 Don't worry if you don't follow this just yet (you can always come back to this example once we have talked more about `purrr:map()`.
 
 ```{r}
+library(dplyr)
 library(purrr)
 
 # Map runs over each element of .x, and the anonymous function defined in .f
@@ -540,4 +541,10 @@ mtcars %>%
 ```
 
 For more detail on this, I encurage you to read my blog post: <http://www.machinegurning.com/rstats/iterating/>.
+
+## Reproducibility info
+
+```{r}
+sessionInfo()
+```
 
