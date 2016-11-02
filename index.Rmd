@@ -1,14 +1,16 @@
 ---
-title: "BEIS coffee and coding http://goo.gl/3fWJrF"
+title: "Coffee and Coding http://cnc.machinegurning.com"
 author: "Matthew Upson matthew.upson@digital.cabinet-office.gov.uk"
 date: '2016-10-26'
 output:
   html_document: default
   html_notebook: default
-web_link: http://goo.gl/3fWJrF
 ---
 
 ```{r setup, include=FALSE}
+
+checkpoint::setSnapshot('2016-10-14')
+
 knitr::opts_chunk$set(
   error = TRUE
   )
@@ -28,8 +30,6 @@ Where:
 
 * $\vec{y}$ is the normalised vector,  
 * $\vec{x}$ is our vector,  
-* $\bar{x}$ is the sample mean,  
-* $s$ is the sample standard deviation.
 
 Before setting out to write the code, there are a few things we already expect to be true of $\vec{y}$.
 We can list some of these expectations, for example:
@@ -390,10 +390,13 @@ First lets create such a list.
 Actually it turns out that we can use `purrr` to help us create this list in the first place.
 Don't worry if you don't follow this just yet (you can always come back to this example once we have talked more about `purrr:map()`.
 
-```{r}
+```{r,message=FALSE,warning=FALSE}
 library(dplyr)
 library(purrr)
+```
 
+
+```{r}
 # Map runs over each element of .x, and the anonymous function defined in .f
 # uses these elements to set the elngth of the sequence of uniformly distributed
 # numbers.
@@ -541,6 +544,15 @@ mtcars %>%
 ```
 
 For more detail on this, I encurage you to read my blog post: <http://www.machinegurning.com/rstats/iterating/>.
+
+
+## Links for further reading
+
+### machinegurning.com
+
+* Test Driven Development: http://www.machinegurning.com/rstats/test-driven-development/
+* Using purrr:map_df: http://www.machinegurning.com/rstats/map_df/
+* Iteratively applying models with purrr: http://www.machinegurning.com/rstats/iterating/
 
 ## Reproducibility info
 
